@@ -1,8 +1,8 @@
 # Use an official Node runtime as a parent image
-FROM node:14 AS build
+FROM node:16-alpine AS build
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy the package.json and package-lock.json files to the container
 COPY package*.json ./
@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 #Add multi-stage build
-FROM alpine:3.16.7
+FROM node:16-alpine
 
 WORKDIR /app
 
