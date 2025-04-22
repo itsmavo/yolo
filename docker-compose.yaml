@@ -42,7 +42,7 @@ services:
       - app-net
 
   #Creates the database microservice
-  app-ip-mongo:
+  app-mongo:
     image: mongo
     container_name: app-mongo
     ports:
