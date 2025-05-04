@@ -7,3 +7,4 @@ vault.yml
 .vscode
 .vscode/*
 .vscode/*.json
+/home/mavo/yolo/.vagrant/machines/default/virtualbox/private_key
