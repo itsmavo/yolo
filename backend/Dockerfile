@@ -20,7 +20,7 @@ WORKDIR /app
 
 RUN apk update && apk add --update nodejs
 
-COPY --from=build /usr/src/app /app
+COPY --from=build /app .
 
 # Expose the port the app runs on
 EXPOSE 5000

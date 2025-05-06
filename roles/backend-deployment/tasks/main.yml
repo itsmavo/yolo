@@ -1,13 +1,13 @@
 ---
 - name: Pull image from repository
   docker_image:
-    name: marvin0solo/marvin-yolo-backend:v1.0.0
+    name: marvin0solo/marvin-yolo-backend:v1.0.1
     source: pull
 
 - name: Create Node.js Backend Container
   docker_container:
     name: marvin-yolo-backend
-    image: marvin0solo/marvin-yolo-backend:v1.0.0
+    image: marvin0solo/marvin-yolo-backend:v1.0.1
     networks:
       - name: app-net
     ports:

@@ -8,3 +8,4 @@ vault.yml
 .vscode/*
 .vscode/*.json
 /home/mavo/yolo/.vagrant/machines/default/virtualbox/private_key
+app-mongo-data
