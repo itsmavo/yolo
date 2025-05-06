@@ -1,0 +1,4 @@
+---
+container_name: marvin-yolo-client
+network: app-net
+volume: app-mongo/app

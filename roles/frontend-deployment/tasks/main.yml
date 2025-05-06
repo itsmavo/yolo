@@ -1,0 +1,14 @@
+- name: pull the latest docker image
+  docker_image:
+    name: marvin0solo/marvin-yolo-client
+    tag: v1.0.0
+    source: pull
+
+- name: node.js frontend-deployment
+  docker_container:
+    name: marvin-yolo-client
+    image: marvin0solo/marvin-yolo-client:v1.0.0
+    ports:
+      - "3000:3000"
+    networks:
+      - name: app-net
