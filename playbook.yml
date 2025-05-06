@@ -3,15 +3,23 @@
   hosts: all
   become: true
   pre_tasks:
+    - name: Check docker installation
+      command: docker --version
+      ignore_errors: true
+      register: docker_installed
+
     - name: Install Docker
       apt:
         name: docker.io
         state: present
+      when: docker_installed is failed
+    - name: start docker service
+      service:
+        name: docker
+        state: started
+        enabled: true
+      when: docker_installed is failed
 
-    - name: Install Docker Compose
-      apt:
-        name: docker-compose
-        state: present
     - name: Create docker network
       docker_network:
         name: app-net
