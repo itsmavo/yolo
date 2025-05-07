@@ -12,4 +12,17 @@ Install the docker engine here:
 ![Alt text](image.png)
 
 ## How to run the app
-Use vagrant up --provison command
+Use 
+```bash
+vagrant up --provison command
+```
+
+## How to initialize Vagrant
+from hashicorp registry pick the ubuntu/focal64 box
+```bash
+vagrant init ubuntu/focal64
+```
+## How to SSH into the Vagrant box
+```bash
+vagrant ssh or vagrant@127.0.0.1 -p 2222 -i ./path
+```
