@@ -55,10 +55,15 @@ image: mongo
 Step 4: Build locally and push to Dockerhub
 ```sh
 docker build -t marvin0solo/marvin-yolo-client:v1.0.0 .
+
 docker build -t marvin0solo/marvin-yolo-backend:v1.0.1 .
+
 docker run -p 3000:3000 marvin0solo/marvin-yolo-client:v1.0.0
+
 docker run -p 5000:5000 marvin0solo/marvin-yolo-backend:v1.0.1
+
 docker push marvin0solo/marvin-yolo-client:v1.0.0
+
 docker push marvin0solo/marvin-yolo-backend:v1.0.1
 ```
 Pull the images from Dockerhub 
