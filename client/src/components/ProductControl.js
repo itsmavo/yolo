@@ -78,7 +78,7 @@ class ProductControl extends Component {
     }
     
     componentDidMount(){
-        axios.get('http://localhost:5000/api/products')
+        axios.get('http://34.45.77.7:5000/api/products')
             .then(res =>{
                 console.log(res)
                 this.setState({
@@ -184,7 +184,7 @@ class ProductControl extends Component {
     }
     handleEditingProduct = (editedProduct) =>{
 
-        axios.put('http://localhost:5000/api/products/' + this.state.selectedProduct._id, editedProduct)
+        axios.put('http://34.45.77.7:5000/api/products/' + this.state.selectedProduct._id, editedProduct)
             .then(res =>console.log(res.data))
         
         this.setState({
