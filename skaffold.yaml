@@ -1,0 +1,26 @@
+apiVersion: skaffold/v4beta13
+kind: Config
+metadata:
+  name: mansolo-osolo-
+build:
+  artifacts:
+    - image: marvin0solo/marvin-yolo-backend
+      context: yolo/backend
+      docker:
+        dockerfile: Dockerfile
+    - image: marvin0solo/marvin-yolo-client
+      context: yolo/client
+      docker:
+        dockerfile: Dockerfile
+    - image: mongo
+      context: yolo/backend
+      docker:
+        dockerfile: Dockerfile
+  tagPolicy:
+    sha256: {}
+manifests:
+  rawYaml:
+    - yolo/manifests/backend-deployment.yml
+    - yolo/manifests/frontend-deployment.yml
+    - yolo/manifests/mongodb-deployment.yml
+    - yolo/manifests/service.yml

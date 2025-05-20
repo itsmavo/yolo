@@ -13,8 +13,9 @@ spec:
         app: backend
     spec:
       containers:
-      - name: backend
+      - name: marvin-yolo-backend
         image: marvin0solo/marvin-yolo-backend:v1.0.1
+        command: ["npm", "start"]
         resources:
           limits:
             memory: "128Mi"
