@@ -36,7 +36,7 @@ This repository contains the code and configuration files for deploying the YOLO
 
 ## Docker Images
 - **Frontend**: `marvin0solo/marvin-yolo-client:v1.0.0`
-- **Backend**: `marvin0solo/marvin-yolo-server:v1.0.0`
+- **Backend**: `marvin0solo/marvin-yolo-backend:v1.0.1`
 - **Database**: `mongo:latest`
 
 # Author: Marvin Osolo
